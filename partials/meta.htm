@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ this.page.meta_description }}"/>
+
+<title>{{ this.page.title }}</title>
+
+<link rel="icon" type="image/png" href="{{ 'assets/images/fav.png'|theme }}"/>
+
+{% styles %}
+
+<link href="{{ [
+    '@framework.extras',
+    'assets/sass/main.scss',
+    'assets/sass/header.scss',
+    'assets/sass/footer.scss',
+    'assets/sass/home.scss'
+]|theme }}" rel="stylesheet"/>
