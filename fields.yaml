@@ -1,0 +1,49 @@
+tabs:
+    fields:
+
+        site_name:
+            label: Site name
+            span: auto
+            tab: Site information
+        logo:
+            label: Logo
+            type: fileupload
+            tab: Site information
+            span: auto
+            mode: image
+            imageHeight: 200
+            imageWidth: 400
+
+        address:
+            label: Address
+            span: auto
+            tab: Contact Information
+        telephone:
+            label: Telephone
+            span: auto
+            tab: Contact Information
+        email:
+            label: E-mail address
+            span: auto
+            tab: Contact Information
+        fax:
+            label: Fax
+            span: auto
+            tab: Contact Information
+
+        facebook:
+          label: Facebook
+          tab: Socials
+          span: auto
+        twitter:
+          label: Twitter
+          tab: Socials
+          span: auto
+        google:
+          label: Google Plus
+          tab: Socials
+          span: auto
+        linkedin:
+          label: Linkedi
+          tab: Socials
+          span: auto
