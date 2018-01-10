@@ -5,6 +5,7 @@ tabs:
             label: Site name
             span: auto
             tab: Site information
+            default: Site name should be placed
         logo:
             label: Logo
             type: fileupload
@@ -18,32 +19,40 @@ tabs:
             label: Address
             span: auto
             tab: Contact Information
+            default: Address should be placed
         telephone:
             label: Telephone
             span: auto
             tab: Contact Information
+            default: Telephone should be placed
         email:
             label: E-mail address
             span: auto
             tab: Contact Information
+            default: Email should be placed
         fax:
             label: Fax
             span: auto
             tab: Contact Information
+            default: Fax should be placed
 
         facebook:
           label: Facebook
           tab: Socials
           span: auto
+          default: Facebook url should be placed
         twitter:
           label: Twitter
           tab: Socials
           span: auto
+          default: Twitter url should be placed
         google:
           label: Google Plus
           tab: Socials
           span: auto
+          default: Google+ url should be placed
         linkedin:
-          label: Linkedi
+          label: Linkedin
           tab: Socials
           span: auto
+          default: Linkedin url should be placed
