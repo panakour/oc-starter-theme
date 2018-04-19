@@ -1,0 +1,15 @@
+{variable name="tagline" label="Tagline" tab="Header" type="text" placement="primary"}{/variable}
+{variable name="banner" label="Banner" tab="Header" type="mediafinder" mode="image"}{/variable}
+
+{repeater name="slider" prompt="Add another slide" tab="Slider"}
+{variable name="image" label="Image (Recommended 2200X811, extension png or jpg)" type="mediafinder" mode="image"}{/variable}
+{variable name="title" label="Title" type="text"}{/variable}
+{/repeater}
+
+{variable name="block1MainTitle" label="Main Title" type="text" tab="Block 1" placement="primary"}{/variable}
+{variable name="block1MainContent" label="Main Content" type="richeditor" tab="Block 1" placement="primary"}{/variable}
+{repeater name="block1" prompt="Add another item" tab="Block 1" placement="primary" maxItems="4"}
+{variable name="image" label="Image (Recommended 570X380, extension png or jpg)" type="mediafinder" mode="image"}{/variable}
+{variable name="title" label="Title" type="text"}{/variable}
+{variable name="subtitle" label="Subtitle" type="text"}{/variable}
+{/repeater}
