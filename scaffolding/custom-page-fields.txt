@@ -13,3 +13,12 @@
 {variable name="title" label="Title" type="text"}{/variable}
 {variable name="subtitle" label="Subtitle" type="text"}{/variable}
 {/repeater}
+
+{variable name="icon" label="Icon" type="dropdown"
+options="
+fa-user-secret:Private Icon |
+fa-truck:Shipping Icon |
+fa-home:House Icon |
+fa-copyright:Copyright Icon |
+fa-pencil-square-o:Pencil Icon"}
+{/variable}
