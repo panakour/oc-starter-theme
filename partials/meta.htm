@@ -20,8 +20,4 @@ $this->page->title .= ' - ' . $this->theme->site_name;;
 
 {% styles %}
 
-<link href="{{ [
-    '~/modules/system/assets/css/framework.extras.css',
-    'assets/vendor/theme/...',
-    'assets/sass/main.scss'
-]|theme }}" rel="stylesheet"/>
+<link href="{{ 'assets/dist/all.css'|theme }}" rel="stylesheet"/>
