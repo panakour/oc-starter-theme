@@ -1,7 +1,7 @@
 let mix = require('laravel-mix');
 let fs = require('fs');
 let path = require('path');
-let glob = require('glob');
+let glob = require('glob-all');
 let PurifyCSSPlugin = require('purifycss-webpack');
 
 
@@ -29,9 +29,14 @@ mix.webpackConfig({
     plugins: [
         new PurifyCSSPlugin({
             purifyOptions: {
-                whitelist: ['*purify*']
+                whitelist: ['*carousel*', '*mfp*']
             },
-            paths: glob.sync(path.join(__dirname, '**/*.htm')),
+            paths: glob.sync([
+                path.join(__dirname, './content/**/*.htm'),
+                path.join(__dirname, './layouts/**/*.htm'),
+                path.join(__dirname, './pages/**/*.htm'),
+                path.join(__dirname, './partials/**/*.htm')
+            ]),
             minimize: mix.config.production
         })
     ],

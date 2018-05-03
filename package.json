@@ -26,6 +26,7 @@
     "laravel-mix": "^2.1.11",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
-    "string-replace-loader": "^2.1.1"
+    "string-replace-loader": "^2.1.1",
+    "glob-all": "^3.1.0"
   }
 }
