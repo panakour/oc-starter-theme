@@ -22,7 +22,10 @@
   "devDependencies": {
     "browser-sync": "^2.23.7",
     "browser-sync-webpack-plugin": "^2.0.1",
+    "help": "^3.0.2",
     "laravel-mix": "^2.1.11",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
     "string-replace-loader": "^2.1.1"
   }
 }

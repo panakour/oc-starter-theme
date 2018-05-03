@@ -1,5 +1,8 @@
 let mix = require('laravel-mix');
 let fs = require('fs');
+let path = require('path');
+let glob = require('glob');
+let PurifyCSSPlugin = require('purifycss-webpack');
 
 
 mix.webpackConfig({
@@ -22,6 +25,12 @@ mix.webpackConfig({
     //         }
     //     ]
     // },
+
+    plugins: [
+        new PurifyCSSPlugin({
+            paths: glob.sync(path.join(__dirname, '**/*.htm'))
+        })
+    ],
 
     devtool: 'source-map'
 
