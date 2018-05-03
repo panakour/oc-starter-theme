@@ -28,7 +28,11 @@ mix.webpackConfig({
 
     plugins: [
         new PurifyCSSPlugin({
-            paths: glob.sync(path.join(__dirname, '**/*.htm'))
+            purifyOptions: {
+                whitelist: ['*purify*']
+            },
+            paths: glob.sync(path.join(__dirname, '**/*.htm')),
+            minimize: mix.config.production
         })
     ],
 
