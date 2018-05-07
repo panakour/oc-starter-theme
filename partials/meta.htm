@@ -1,10 +1,10 @@
 ==
 function onEnd() {
 
-if($this->page->title == 'Home') {
-$this->page->title = $this->theme->site_name;
+if($this->url === '/') {
+  $this->page->title = $this->theme->site_name;
 } else {
-$this->page->title .= ' - ' . $this->theme->site_name;;
+  $this->page->title .= ' - ' . $this->theme->site_name;
 }
 
 }
