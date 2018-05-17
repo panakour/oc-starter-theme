@@ -29,7 +29,7 @@ mix.webpackConfig({
     plugins: [
         new PurifyCSSPlugin({
             purifyOptions: {
-                whitelist: ['*carousel*', '*mfp*']
+                whitelist: ['*stripe-loading-indicator*', '*oc-loading*', '*flash-message*']
             },
             paths: glob.sync([
                 path.join(__dirname, './content/**/*.htm'),
