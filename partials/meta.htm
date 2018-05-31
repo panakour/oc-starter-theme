@@ -1,11 +1,21 @@
 ==
 function onEnd() {
 
-if($this->url === '/') {
-  $this->page->title = $this->theme->site_name;
-} else {
-  $this->page->title .= ' - ' . $this->theme->site_name;
+switch($this->url) {
+    case '/':
+        $this->page->title = $this->theme->site_name;
+        $this['facebookImage'] = isset($this->page->apiBag['staticPage']->slider[0]['image']) ? url('/storage/app/media/'.$this->page->apiBag['staticPage']->slider[0]['image']) : 'default image path';
+        break;
+    case '/news-details/:slug':
+        $this['facebookImage'] = isset($this->page->components['componentName']->modelName->image) ? url('/storage/app/media/'.$this->page->components['componentName']->modelName->image) : 'default image path';
+        break;
+    case '/property-details/:slug':
+        $this['facebookImage'] = $this->page->components['componentName']->modelName->images[0]->path ?? 'default image path';
+        break;
+    default:
+        $this->page->title .= ' - ' . $this->theme->site_name;
 }
+
 
 }
 ==
@@ -19,7 +29,7 @@ if($this->url === '/') {
 <meta property="og:description" content="{{ this.page.meta_description }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ url().full() }}" />
-<meta property="og:image" content="http://example.com/image.jpg" />
+<meta property="og:image" content="{{ facebookImage }}" />
 
 <link rel="icon" type="image/png" href="{{ 'assets/images/fav.png'|theme }}"/>
 
