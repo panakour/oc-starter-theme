@@ -14,7 +14,7 @@ switch($this->url) {
         break;
     default:
         $this->page->title .= ' - ' . $this->theme->site_name;
-        $this['facebookImage'] = url('/storage/app/media/'.$this->page->apiBag['staticPage']->block1image);
+        $this['facebookImage'] = isset($this->page->apiBag['staticPage']->block1image) ? url('/storage/app/media/'.$this->page->apiBag['staticPage']->block1image) : 'default image path';
 }
 
 
