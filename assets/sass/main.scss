@@ -1,0 +1,16 @@
+article {
+
+  ol, ul {
+    line-height: 2.34375em;
+    padding-left: 40px;
+  }
+
+  ol {
+    list-style: decimal outside;
+  }
+
+  ul {
+    list-style: disc outside;
+  }
+
+}
