@@ -1,15 +1,16 @@
-article {
+//framework assets
+@import "../../../../modules/system/assets/css/framework.extras.css";
+@import "../../../../modules/backend/formwidgets/richeditor/assets/css/richeditor.css"; //wrap with "fr-view" class where you want to apply richeditor styles
 
-  ol, ul {
-    padding-left: 40px;
-  }
+//vendor theme/assets
+//@import "../vendor/theme/...";
 
-  ol {
-    list-style: decimal outside;
-  }
+//custom assets
+@import 'variables';
+@import 'functions/calculate-rem';
+@import 'mixins/media';
 
-  ul {
-    list-style: disc outside;
-  }
-
-}
+@import "general";
+@import "header";
+@import "footer";
+@import "home";
