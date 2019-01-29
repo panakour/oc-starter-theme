@@ -1,19 +1,24 @@
-{variable name="tagline" label="Tagline" tab="Header" type="text" placement="primary"}{/variable}
-{variable name="banner" label="Banner" tab="Header" type="mediafinder" mode="image"}{/variable}
-
-{repeater name="slider" prompt="Add another slide" tab="Slider"}
-{variable name="image" label="Image (Recommended 2200X811, extension png or jpg)" type="mediafinder" mode="image"}{/variable}
-{variable name="title" label="Title" type="text"}{/variable}
+{# repeater SLIDER #}
+{variable label="HOMEPAGE SLIDER" type="section" span="storm" tab="Slider" placement="primary" comment="Change homepage slider values using the repeater bellow."}{/variable}
+{repeater name="slider" prompt="Add another slide" tab="Slider" label="Slider" placement="primary" span="storm" cssClass="col-lg-10 col-lg-offset-1" }
+{variable name="image" label="Image (1920x600 px)" type="mediafinder" mode="image" imageWidth="100%" imageHeight="300"}{/variable}
+{variable name="title" label="Title" type="text" size="medium" span="left"}{/variable}
+{variable name="button_text" label="Button Text" span="right" }{/variable}
+{variable name="subtitle" label="Subtitle" span="left" slider-subtitle" }{/variable}
+{variable name="button_url" label="Button Url" span="right" type="text"}{/variable}
+{variable name="button_new_tab" label="New tab" type="checkbox" span="right"}{/variable}
 {/repeater}
 
-{variable name="block1MainTitle" label="Main Title" type="text" tab="Block 1" placement="primary"}{/variable}
-{variable name="block1MainContent" label="Main Content" type="richeditor" tab="Block 1" placement="primary"}{/variable}
-{repeater name="block1" prompt="Add another item" tab="Block 1" placement="primary" maxItems="4"}
-{variable name="image" label="Image (Recommended 570X380, extension png or jpg)" type="mediafinder" mode="image"}{/variable}
-{variable name="title" label="Title" type="text"}{/variable}
-{variable name="subtitle" label="Subtitle" type="text"}{/variable}
-{/repeater}
+{# BLOCK WITH AN IMAGE AND INFO #}
+{variable label="ABOUT US" type="section" span="storm" cssClass="col-md-12" tab="About" placement="primary" comment="Edit about us section in homepage."}{/variable}
+{variable name="about_image" label="Image (960x560 px)" type="mediafinder" mode="image" span="right" tab="About" placement="primary"}{/variable}
+{variable name="about_title" label="Title" type="text" span="left" placement="primary" tab="About" }{/variable}
+{variable name="about_description" label="About Description" type="textarea" size="large" span="left" placement="primary" tab="About"}{/variable}
+{variable name="about_button_text" label="Button Text" span="left" tab="About"  placement="primary" type="text"}{/variable}
+{variable name="about_button_url" label="Button Url" span="left" type="staticpagepicker" tab="About" placement="primary" }{/variable}
+{variable name="about_button_new_tab" label="New tab" type="checkbox" span="left" tab="About" placement="primary" {/variable}
 
+{# DROPDOWN LIST WITH VALUES #}
 {variable name="icon" label="Icon" type="dropdown"
 options="
 fa-user-secret:Private Icon |
@@ -22,3 +27,20 @@ fa-home:House Icon |
 fa-copyright:Copyright Icon |
 fa-pencil-square-o:Pencil Icon"}
 {/variable}
+
+{# repeater Quick links #}
+{variable label="QUICK LINKS" type="section" span="storm" cssClass="col-md-12" tab="Quick links" placement="primary" comment="Edit our quick links section in homepage."}{/variable}
+{variable name="quick_links_title" label="Title" type="text" span="storm" cssClass="col-md-6 col-md-offset-3" placement="primary" tab="Quick links" }{/variable}
+{repeater name="quick_links" prompt="Add another item" tab="Quick links" label="Quick links" placement="primary"}
+{variable name="title" label="Title" type="text" cssClass="col-md-4" span="storm"}{/variable}
+{variable name="subtitle" label="Subtitle" type="text" cssClass="col-md-4" span="storm"}{/variable}
+{variable name="url" label="Quick link" type="staticpagepicker" cssClass="col-md-4" span="storm"}{/variable}
+{/repeater}
+
+{# repeater Image+Page Link #}
+{variable label="OUR PARTNERSHIP" type="section" span="storm" cssClass="col-md-12" tab="Partnership banners" placement="primary" comment="Edit our Partnership banners section in homepage."}{/variable}
+{variable name="partnership_title" label="Title" type="text" span="storm" cssClass="col-md-6 col-md-offset-3" placement="primary" tab="Partnership banners" }{/variable}
+{repeater name="partnership_banners" prompt="Add another item" tab="Partnership banners" label="Partnership banners" placement="primary" span="storm" cssClass="col-md-8 col-md-offset-2"  }
+{variable name="image" label="Image (370x250 px)" type="mediafinder" mode="image" imageWidth="25%" span="left"}{/variable}
+{variable name="url" label="Page" type="staticpagepicker" span="right" }{/variable}
+{/repeater}
