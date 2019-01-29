@@ -65,7 +65,7 @@ mix.browserSync({
     proxy: 'october.localhost'
 });
 
-mix.sass('./assets/sass/all.scss', './all.css')
+mix.sass('./assets/sass/main.scss', './all.css')
     .options({
         processCssUrls: false
     });
