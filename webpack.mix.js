@@ -47,7 +47,7 @@ mix.webpackConfig({
 
 mix.setPublicPath('./assets/dist');
 
-mix.sourceMaps();
+mix.sourceMaps(true, 'source-map');
 
 mix.browserSync({
     injectChanges: true,
