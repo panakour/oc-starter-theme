@@ -80,10 +80,26 @@ let scripts = [
 
 mix.scripts(scripts, './assets/dist/all.js');
 
-checkTheExistenceOfScripts(scripts);
+checkAccurateOfScripts();
+
+function checkAccurateOfScripts() {
+    checkDuplicates(scripts);
+    checkTheExistenceOfScripts(scripts);
+}
+
+function checkDuplicates(scripts) {
+    let scriptsSoFar = Object.create(null);
+    for (let i = 0; i < scripts.length; ++i) {
+        let currentScript = scripts[i];
+        if (currentScript in scriptsSoFar) {
+            throw "Duplicate script => " + currentScript;
+        }
+        scriptsSoFar[currentScript] = true;
+    }
+}
+
 
 function checkTheExistenceOfScripts(scripts) {
-
     scripts.forEach(function (script) {
         fs.open(script, 'r', (err, fd) => {
             if (err) {
@@ -92,7 +108,6 @@ function checkTheExistenceOfScripts(scripts) {
         });
 
     });
-
 }
 
 // Full API
