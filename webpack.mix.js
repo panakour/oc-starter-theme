@@ -3,7 +3,11 @@ let fs = require('fs');
 let path = require('path');
 let glob = require('glob-all');
 let PurifyCSSPlugin = require('purifycss-webpack');
+const confEnv = require('dotenv').config({path: './../../.env'});
 
+if (confEnv.error) {
+    throw confEnv.error
+}
 
 mix.webpackConfig({
 
@@ -62,7 +66,7 @@ mix.browserSync({
             }
         }
     ],
-    proxy: 'october.localhost'
+    proxy: confEnv.parsed.APP_URL
 });
 
 mix.sass('./assets/sass/main.scss', './all.css')
