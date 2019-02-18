@@ -1,25 +1,3 @@
-==
-function onEnd() {
-
-switch($this->url) {
-    case '/':
-        $this->page->title = $this->theme->site_name;
-        $this['facebookImage'] = isset($this->page->apiBag['staticPage']->slider[0]['image']) ? url('/storage/app/media/'.$this->page->apiBag['staticPage']->slider[0]['image']) : 'default image path';
-        break;
-    case '/news-details/:slug':
-        $this['facebookImage'] = isset($this->page->components['componentName']->modelName->image) ? url('/storage/app/media/'.$this->page->components['componentName']->modelName->image) : 'default image path';
-        break;
-    case '/property-details/:slug':
-        $this['facebookImage'] = $this->page->components['componentName']->modelName->images[0]->path ?? 'default image path';
-        break;
-    default:
-        $this->page->title .= ' - ' . $this->theme->site_name;
-        $this['facebookImage'] = isset($this->page->apiBag['staticPage']->block1image) ? url('/storage/app/media/'.$this->page->apiBag['staticPage']->block1image) : 'default image path';
-}
-
-
-}
-==
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ this.page.meta_description }}"/>
