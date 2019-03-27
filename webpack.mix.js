@@ -75,7 +75,7 @@ mix.sass('./assets/sass/main.scss', './all.css')
     });
 
 let scripts = [
-    '../../modules/backend/assets/js/vendor/jquery.min.js',
+    'node_modules/jquery/dist/jquery.min.js',
     '../../modules/system/assets/js/framework.js',
     '../../modules/system/assets/js/framework.extras.js',
     // './assets/vendor/theme/...',
