@@ -4,12 +4,20 @@ article {
     padding-left: 40px;
   }
 
-  ol {
-    list-style: decimal outside;
-  }
+    ol {
+      list-style: decimal outside !important;
 
-  ul {
-    list-style: disc outside;
-  }
+      li {
+        list-style-type: decimal;
+      }
+    }
+
+    ul {
+      list-style: disc outside !important;
+
+      li {
+        list-style-type: disc;
+      }
+    }
 
 }
